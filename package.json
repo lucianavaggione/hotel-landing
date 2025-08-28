@@ -4,7 +4,7 @@
   "description": "Hotel California – Technical test (full)",
   "scripts": {
     "dev": "parcel serve index.html --open",
-    "build": "parcel build index.html --dist-dir dist --public-url ./"
+    "build": "parcel build index.html --dist-dir dist --public-url ./ && node copy-robots.js"
   },
   "devDependencies": {
     "@parcel/packager-raw-url": "^2.15.4",

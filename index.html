@@ -20,53 +20,49 @@
     </script>
   </head>
   <body>
-    <a id="skip" class="visually-hidden" href="#contenido"
-      >Saltar al contenido</a
-    >
     <header class="header" role="banner">
-      <div class="container row">
-        <h1 class="logo">Hotel California</h1>
-        <nav class="nav" aria-label="Principal">
-          <ul class="nav__links" role="menubar">
-            <li><a href="#hero" role="menuitem">Inicio</a></li>
-            <li><a href="#galeria" role="menuitem">Galería</a></li>
-            <li><a href="#experiencias" role="menuitem">Experiencias</a></li>
-            <li><a href="#contacto" role="menuitem">Contacto</a></li>
+      <div class="container header__row">
+        <h1 class="header__logo">Hotel California</h1>
+
+        <nav class="header__nav" aria-label="Principal">
+          <ul class="header__nav-links" role="menubar">
+            <li role="menuitem"><a href="#hero">Inicio</a></li>
+            <li role="menuitem"><a href="#galeria">Galería</a></li>
+            <li role="menuitem"><a href="#experiencias">Experiencias</a></li>
+            <li role="menuitem"><a href="#contacto">Contacto</a></li>
           </ul>
 
           <button
             id="theme-toggle"
-            class="theme-toggle"
+            class="header__theme-toggle"
             aria-label="Cambiar tema"
             aria-pressed="false"
-            title="Cambiar tema"
           >
-            <span class="visually-hidden">Cambiar tema</span>
-            <span class="theme-toggle__icon">&#9788;</span>
-            <span class="switch" aria-hidden="true"
-              ><span class="knob" aria-hidden="true"></span
-            ></span>
-            <span class="theme-toggle__icon">&#9789;</span>
+            <span class="header__theme-icon">&#9788;</span>
+            <span class="header__theme-switch" aria-hidden="true">
+              <span class="header__theme-knob" aria-hidden="true"></span>
+            </span>
+            <span class="header__theme-icon">&#9789;</span>
           </button>
 
           <button
             id="burger"
-            class="btn-icon nav__toggle"
-            aria-controls="nav-panel"
+            class="header__nav-burger btn-icon"
+            aria-controls="header__nav-panel"
             aria-expanded="false"
             aria-label="Abrir menú"
           >
             ☰
           </button>
 
-          <aside id="nav-panel" class="nav__panel" hidden>
-            <div class="nav__panel-container">
+          <aside id="nav-panel" class="header__nav-panel" hidden>
+            <div class="header__nav-panel-container">
               <strong>Menú</strong>
               <button id="nav-close" class="btn-icon" aria-label="Cerrar menú">
                 ✕
               </button>
             </div>
-            <ul class="nav__panel-links">
+            <ul class="header__nav-panel-links">
               <li><a href="#hero">Inicio</a></li>
               <li><a href="#galeria">Galería</a></li>
               <li><a href="#experiencias">Experiencias</a></li>
@@ -77,7 +73,7 @@
       </div>
     </header>
 
-    <main id="contenido">
+    <main id="main-content">
       <section id="hero" class="hero">
         <div
           id="hero-slider"
@@ -90,12 +86,12 @@
             <article class="slider__slide">
               <div class="slider__content container">
                 <h2 class="slider__title">Bienvenido al Hotel California</h2>
-                <div class="slider__title-overlay"></div>
+                <div class="slider__overlay"></div>
                 <p class="slider__subtitle">
                   Such a lovely place — check in for sun, comfort and timeless
                   vibes.
                 </p>
-                <a href="#galeria" class="btn">Explorar</a>
+                <a href="#galeria" class="btn slider__btn">Explorar</a>
               </div>
             </article>
             <article class="slider__slide">
@@ -103,22 +99,23 @@
                 <h2 class="slider__title">
                   Habitaciones con vista al atardecer
                 </h2>
-                <div class="slider__title-overlay"></div>
+                <div class="slider__overlay"></div>
                 <p class="slider__subtitle">
                   Terraza, comfort y desayuno junto a la playa.
                 </p>
-                <a href="#galeria" class="btn">Ver habitaciones</a>
+                <a href="#galeria" class="btn slider__btn">Ver habitaciones</a>
               </div>
             </article>
             <article class="slider__slide">
               <div class="slider__content container">
                 <h2 class="slider__title">Experiencias únicas</h2>
-                <div class="slider__title-overlay"></div>
+                <div class="slider__overlay"></div>
                 <p class="slider__subtitle">Spa, surf y rutas culturales.</p>
-                <a href="#galeria" class="btn">Descubrir</a>
+                <a href="#galeria" class="btn slider__btn">Descubrir</a>
               </div>
             </article>
           </div>
+
           <div class="slider__controls">
             <button
               class="slider__arrow slider__arrow--prev"
@@ -127,26 +124,25 @@
               ‹
             </button>
             <ul class="slider__bullets" role="tablist" aria-label="Slides">
-              <li>
+              <li role="tab">
                 <button
-                  role="tab"
-                  aria-current="true"
+                  aria-selected="true"
                   aria-label="Ir a slide 1"
-                  class="btn"
+                  class="slider__bullet active"
                 ></button>
               </li>
-              <li>
+              <li role="tab">
                 <button
-                  role="tab"
+                  aria-selected="false"
                   aria-label="Ir a slide 2"
-                  class="btn"
+                  class="slider__bullet"
                 ></button>
               </li>
-              <li>
+              <li role="tab">
                 <button
-                  role="tab"
+                  aria-selected="false"
                   aria-label="Ir a slide 3"
-                  class="btn"
+                  class="slider__bullet"
                 ></button>
               </li>
             </ul>
@@ -160,12 +156,12 @@
         </div>
       </section>
 
-      <section id="galeria" aria-labelledby="galeria-title">
+      <section id="galeria" class="gallery" aria-labelledby="galeria-title">
         <div class="container">
-          <header class="filters">
-            <div class="row">
+          <header class="gallery__filters">
+            <div class="gallery__filters-row">
               <h2 id="galeria-title">Galería</h2>
-              <div class="search">
+              <div class="gallery__search">
                 <label class="visually-hidden" for="search">Buscar</label>
                 <input
                   id="search"
@@ -179,34 +175,34 @@
               </div>
             </div>
 
-            <div class="row">
-              <div>
-                <ul
-                  id="tabs"
-                  class="tabs"
-                  role="tablist"
-                  aria-label="Categorías"
-                ></ul>
-                <label for="sort">Ordenar</label>
-                <select id="sort" aria-label="Ordenar">
-                  <option value="recent">Más reciente</option>
-                  <option value="views">Más visto</option>
-                  <option value="az">A–Z</option>
-                </select>
-              </div>
+            <div class="gallery__filters-row">
+              <ul
+                id="tabs"
+                class="gallery__tabs"
+                role="tablist"
+                aria-label="Categorías"
+              ></ul>
+              <label for="sort">Ordenar</label>
+              <select id="sort" aria-label="Ordenar">
+                <option value="recent">Más reciente</option>
+                <option value="views">Más visto</option>
+                <option value="az">A–Z</option>
+              </select>
             </div>
 
-            <div class="row">
-              <div class="chips" id="chips" aria-label="Etiquetas"></div>
+            <div class="gallery__filters-row">
+              <div
+                id="chips"
+                class="gallery__chips"
+                aria-label="Etiquetas"
+              ></div>
             </div>
           </header>
-          <p id="empty" class="state-empty" hidden>
+
+          <p id="empty" class="gallery__empty state-empty" hidden>
             No hay resultados que coincidan con los filtros.
           </p>
-        </div>
-
-        <div class="gallery">
-          <div id="masonry" class="masonry" aria-live="polite"></div>
+          <div id="masonry" class="gallery__grid" aria-live="polite"></div>
         </div>
       </section>
     </main>
@@ -222,32 +218,39 @@
       <div class="lightbox__dialog">
         <header class="lightbox__header">
           <h3 id="lightbox-title">Vista previa</h3>
-          <button id="lightbox-close" class="btn-icon" aria-label="Cerrar">
+          <button
+            id="lightbox-close"
+            class="lightbox__close btn-icon"
+            aria-label="Cerrar"
+          >
             ✕
           </button>
         </header>
         <div class="lightbox__media"></div>
         <footer class="lightbox__footer">
-          <button id="lightbox-prev" class="btn">Anterior</button>
-          <p id="lightbox-caption" aria-live="polite"></p>
-          <button id="lightbox-next" class="btn">Siguiente</button>
+          <button id="lightbox-prev" class="lightbox__btn">Anterior</button>
+          <p
+            id="lightbox-caption"
+            class="lightbox__caption"
+            aria-live="polite"
+          ></p>
+          <button id="lightbox-next" class="lightbox__btn">Siguiente</button>
         </footer>
       </div>
     </div>
 
     <footer class="footer">
-      <div class="container">
-        <nav aria-label="Social">
+      <div class="container footer__content">
+        <nav class="footer__social" aria-label="Social">
           <a href="#" aria-label="Twitter">Twitter</a> ·
           <a href="#" aria-label="Instagram">Instagram</a> ·
           <a href="#" aria-label="YouTube">YouTube</a>
         </nav>
-        <small>© 2025 Hotel California</small>
+        <small class="footer__copyright">© 2025 Hotel California</small>
       </div>
     </footer>
 
     <a href="#" id="goTopBtn" class="btn go-top" aria-label="Ir arriba">↑</a>
-
     <script type="module" src="src/js/main.js"></script>
   </body>
 </html>

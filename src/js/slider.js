@@ -82,7 +82,7 @@ export class Slider {
 
     this.bullets.forEach((b, i) => {
       const isActive = i === this.index;
-      b.setAttribute("aria-current", isActive ? "true" : "false");
+      b.setAttribute("aria-selected", isActive ? "true" : "false");
       b.classList.toggle("active", isActive);
     });
   }

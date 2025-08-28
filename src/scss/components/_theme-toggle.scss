@@ -1,0 +1,44 @@
+.header__theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+
+  & .header__theme-switch {
+    width: 44px;
+    height: 24px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid var(--border);
+    display: inline-flex;
+    align-items: center;
+    padding: 2px;
+    position: relative;
+
+    .header__theme-knob {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--yellow-sun);
+      transform: translateX(0);
+      transition: transform 0.25s ease;
+    }
+  }
+
+  & .header__theme-icon {
+    font-size: 1.1rem;
+  }
+}
+
+:root[data-theme="dark"] .header__theme-toggle {
+  background: #0b1220;
+  border-color: #111827;
+
+  .header__theme-knob {
+    transform: translateX(20px);
+    background: var(--secondary);
+  }
+}

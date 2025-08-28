@@ -23,7 +23,7 @@ export function initGallery() {
   el.tabs.innerHTML = categories
     .map(
       (c, i) =>
-        `<li><button role="tab" aria-selected="${
+        `<li role="tab"><button aria-selected="${
           i === 0
         }" data-cat="${c}" class="${
           i === 0 ? "active" : ""
@@ -124,7 +124,7 @@ export function initGallery() {
     // Generate items
     const items = list.map((d, i) => {
       const div = document.createElement("div");
-      div.className = "masonry__item";
+      div.className = "gallery__grid-item";
       div.dataset.w = d.width;
       div.dataset.h = d.height;
 

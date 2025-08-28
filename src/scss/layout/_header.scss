@@ -1,0 +1,20 @@
+.header {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding: 0 1.5rem;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  &__logo {
+    font-size: 1.125rem;
+    letter-spacing: 0.4px;
+  }
+}
