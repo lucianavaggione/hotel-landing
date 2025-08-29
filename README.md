@@ -22,8 +22,8 @@ npm run build
 ```
 
 ## Lighthouse
-Web
+### Web ###
 ![Landing Page Preview](docs/lighthouse.png)
 
-Mobile
+### Mobile ###
 ![Landing Page Preview](docs/lighthouse-mobile.png)
