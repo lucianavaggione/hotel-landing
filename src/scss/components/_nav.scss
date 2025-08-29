@@ -72,4 +72,10 @@
       display: block;
     }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    &-panel {
+      transition: none !important;
+    }
+  }
 }

@@ -1,11 +1,8 @@
-import assets from "./images.js";
-
 export class Slider {
   constructor(root, { interval = 5000 } = {}) {
     this.root = root;
     this.track = root.querySelector(".slider__track");
     this.slides = Array.from(root.querySelectorAll(".slider__slide"));
-    this.images = [assets.hero1, assets.hero2, assets.hero3];
     this.bullets = Array.from(root.querySelectorAll(".slider__bullets button"));
     this.prevArrow = root.querySelector(".slider__arrow--prev");
     this.nextArrow = root.querySelector(".slider__arrow--next");
@@ -14,10 +11,6 @@ export class Slider {
     this.interval = interval;
     this.timer = null;
     this.paused = false;
-
-    this.slides.forEach((slide, i) => {
-      slide.style.backgroundImage = `url(${this.images[i]})`;
-    });
 
     this.update();
     this.bind();

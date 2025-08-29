@@ -20,3 +20,10 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Lighthouse
+Web
+![Landing Page Preview](docs/lighthouse.png)
+
+Mobile
+![Landing Page Preview](docs/lighthouse-mobile.png)

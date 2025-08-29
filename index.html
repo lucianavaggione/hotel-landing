@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,6 +18,12 @@
         "url": "https://example.com/hotel-california"
       }
     </script>
+    <link
+      rel="preload"
+      as="image"
+      href="./src/images/hero1-desktop.webp"
+      fetchpriority="high"
+    />
   </head>
   <body>
     <header class="header" role="banner">
@@ -84,6 +90,22 @@
         >
           <div class="slider__track">
             <article class="slider__slide">
+              <picture>
+                <source
+                  srcset="./src/images/hero1-mobile.webp"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="./src/images/hero1-desktop.webp"
+                  media="(min-width: 769px)"
+                />
+                <img
+                  src="./src/images/hero1-desktop.webp"
+                  alt="Bienvenido al Hotel California"
+                  class="slider__bg"
+                  fetchpriority="high"
+                />
+              </picture>
               <div class="slider__content container">
                 <h2 class="slider__title">Bienvenido al Hotel California</h2>
                 <div class="slider__overlay"></div>
@@ -95,6 +117,22 @@
               </div>
             </article>
             <article class="slider__slide">
+              <picture>
+                <source
+                  srcset="./src/images/hero2-mobile.webp"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="./src/images/hero2-desktop.webp"
+                  media="(min-width: 769px)"
+                />
+                <img
+                  src="./src/images/hero2-desktop.webp"
+                  alt="Habitaciones con vista al atardecer"
+                  class="slider__bg"
+                  loading="lazy"
+                />
+              </picture>
               <div class="slider__content container">
                 <h2 class="slider__title">
                   Habitaciones con vista al atardecer
@@ -107,6 +145,22 @@
               </div>
             </article>
             <article class="slider__slide">
+              <picture>
+                <source
+                  srcset="./src/images/hero3-mobile.webp"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcset="./src/images/hero3-desktop.webp"
+                  media="(min-width: 769px)"
+                />
+                <img
+                  src="./src/images/hero3-desktop.webp"
+                  alt="Experiencias únicas"
+                  class="slider__bg"
+                  loading="lazy"
+                />
+              </picture>
               <div class="slider__content container">
                 <h2 class="slider__title">Experiencias únicas</h2>
                 <div class="slider__overlay"></div>
@@ -162,32 +216,32 @@
             <div class="gallery__filters-row">
               <h2 id="galeria-title">Galería</h2>
               <div class="gallery__search">
-                <label class="visually-hidden" for="search">Buscar</label>
                 <input
                   id="search"
                   type="search"
                   placeholder="Buscar por título o tags"
                   aria-describedby="search-help"
                 />
-                <span id="search-help" class="visually-hidden"
-                  >Escribe para filtrar resultados</span
-                >
               </div>
             </div>
 
             <div class="gallery__filters-row">
-              <ul
-                id="tabs"
-                class="gallery__tabs"
-                role="tablist"
-                aria-label="Categorías"
-              ></ul>
-              <label for="sort">Ordenar</label>
-              <select id="sort" aria-label="Ordenar">
-                <option value="recent">Más reciente</option>
-                <option value="views">Más visto</option>
-                <option value="az">A–Z</option>
-              </select>
+              <div class="gallery__filters-col">
+                <ul
+                  id="tabs"
+                  class="gallery__tabs"
+                  role="tablist"
+                  aria-label="Categorías"
+                ></ul>
+              </div>
+              <div class="gallery__filters-col">
+                <label for="sort">Ordenar</label>
+                <select id="sort" aria-label="Ordenar">
+                  <option value="recent">Más reciente</option>
+                  <option value="views">Más visto</option>
+                  <option value="az">A–Z</option>
+                </select>
+              </div>
             </div>
 
             <div class="gallery__filters-row">

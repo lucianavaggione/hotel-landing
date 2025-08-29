@@ -1,7 +1,17 @@
-.gallery__filters-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.gallery__filters {
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  &-col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
 }
 
 .gallery__chips {
@@ -49,6 +59,7 @@
 .gallery__tabs {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
 

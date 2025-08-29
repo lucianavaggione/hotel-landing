@@ -11,7 +11,7 @@
     width: 44px;
     height: 24px;
     border-radius: 999px;
-    background: #fff;
+    background: white;
     border: 1px solid var(--border);
     display: inline-flex;
     align-items: center;
@@ -30,12 +30,19 @@
 
   & .header__theme-icon {
     font-size: 1.1rem;
+    color: var(--dark-gray);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    & .header__theme-switch .header__theme-knob {
+      transition: none !important;
+    }
   }
 }
 
 :root[data-theme="dark"] .header__theme-toggle {
-  background: #0b1220;
-  border-color: #111827;
+  background: var(--surface);
+  border-color: var(--border);
 
   .header__theme-knob {
     transform: translateX(20px);

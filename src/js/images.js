@@ -1,7 +1,3 @@
-const hero1 = new URL("../images/hero1.jpg", import.meta.url).href;
-const hero2 = new URL("../images/hero2.jpg", import.meta.url).href;
-const hero3 = new URL("../images/hero3.jpg", import.meta.url).href;
-
 const destination2 = new URL("../images/gallery/destination2.jpg", import.meta.url).href;
 const destination2Webp = new URL("../images/gallery/destination2.webp", import.meta.url).href;
 const destination5 = new URL("../images/gallery/destination5.jpg", import.meta.url).href;
@@ -64,10 +60,6 @@ const spa27 = new URL("../images/gallery/spa27.jpg", import.meta.url).href;
 const spa27Webp = new URL("../images/gallery/spa27.webp", import.meta.url).href;
 
 export default {
-  hero1,
-  hero2,
-  hero3,
-
   destination2,
   destination2Webp,
   destination5,

@@ -19,6 +19,7 @@ body {
 }
 
 :root {
+  /* Default light theme (fallback) */
   --bg: #{$bg};
   --fg: #{$fg};
   --muted: #{$muted};
@@ -27,7 +28,40 @@ body {
   --border: #{$border};
   --surface: #{$surface};
   --light-gray: #{$light-gray};
+  --dark-gray: #{$dark-gray};
   --yellow-sun: #{$yellow-sun};
+  --lightbox-dialog-bg: #{$lightbox-dialog-bg};
+  --lightbox-header-bg: #{$lightbox-header-bg};
+}
+
+/* OS setting */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #{$bg-dark};
+    --fg: #{$fg-dark};
+    --muted: #{$muted-dark};
+    --primary: #{$primary};
+    --border: #{$border-dark};
+    --surface: #{$surface-dark};
+    --light-gray: #{$light-gray-dark};
+    --dark-gray: #{$dark-gray-dark};
+  }
+}
+
+/* Explicit user choice overrides */
+:root[data-theme="light"] {
+  --bg: #{$bg};
+  --fg: #{$fg};
+  --muted: #{$muted};
+  --primary: #{$primary};
+  --secondary: #{$secondary};
+  --border: #{$border};
+  --surface: #{$surface};
+  --light-gray: #{$light-gray};
+  --dark-gray: #{$dark-gray};
+  --yellow-sun: #{$yellow-sun};
+  --lightbox-dialog-bg: #{$lightbox-dialog-bg};
+  --lightbox-header-bg: #{$lightbox-header-bg};
 }
 
 :root[data-theme="dark"] {
@@ -38,4 +72,5 @@ body {
   --border: #{$border-dark};
   --surface: #{$surface-dark};
   --light-gray: #{$light-gray-dark};
+  --dark-gray: #{$dark-gray-dark};
 }

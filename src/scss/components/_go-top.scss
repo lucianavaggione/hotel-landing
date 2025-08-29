@@ -1,5 +1,5 @@
 .go-top {
-  color: #fff;
+  color: white;
   font-size: 1.5rem;
   position: fixed;
   bottom: 20px;
@@ -11,5 +11,5 @@
 
 .go-top:hover {
   opacity: 1;
-  background-color: #555;
+  background-color: var(--light-gray);
 }
